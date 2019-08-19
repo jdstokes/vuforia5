@@ -12,7 +12,7 @@ public class Shooting : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) & Input.GetKeyDown(KeyCode.LeftControl))
         {
            GameObject paintball =  Instantiate(prefabPaintball, spawnPoint.position, spawnPoint.rotation);
            paintball.GetComponent<Rigidbody>().AddForce(paintball.transform.forward * shootForce);
